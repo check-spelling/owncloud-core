@@ -205,13 +205,13 @@ Feature: Autocompletion of share-with names
   Scenario: autocompletion of a pattern where the name of existing user contains the pattern somewhere in the middle but accounts medial search is disabled
     Given these users have been created without skeleton files and not initialized:
       | username | displayname   |
-      | someone  | finnance typo |
+      | someone  | finance typo |
     And user "autocomplete-test-user" has logged in using the webUI
     And the user has browsed to the files page
     And the administrator has added system config key "accounts.enable_medial_search" with value "false" and type "boolean"
     And the user has opened the share dialog for folder "simple-folder"
     When the user types "finn" in the share-with-field
-    Then only user "finnance typo" should be listed in the autocomplete list on the webUI
+    Then only user "finance typo" should be listed in the autocomplete list on the webUI
 
   Scenario: autocompletion of a pattern where the display name of existing user contains the pattern somewhere in the end but accounts medial search is disabled
     Given these users have been created without skeleton files and not initialized:

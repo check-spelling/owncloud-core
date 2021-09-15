@@ -406,7 +406,7 @@ Summary
 -------
 
 * Bugfix - Use trusted domains to compute the signature of signed urls: [#38465](https://github.com/owncloud/core/pull/38465)
-* Bugfix - Handle exceptions with inaccesible federated share: [#38474](https://github.com/owncloud/core/pull/38474)
+* Bugfix - Handle exceptions with inaccessible federated share: [#38474](https://github.com/owncloud/core/pull/38474)
 * Bugfix - Fix mispositioned ui elements after leaving viewerMode: [#38547](https://github.com/owncloud/core/issues/38547)
 * Bugfix - Fix move operation from encrypted storage to unencrypted storage: [#38567](https://github.com/owncloud/core/pull/38567)
 * Bugfix - Creating self group-reshare should not not share to self: [#38581](https://github.com/owncloud/core/pull/38581)
@@ -481,10 +481,10 @@ Details
 
    https://github.com/owncloud/core/pull/38465
 
-* Bugfix - Handle exceptions with inaccesible federated share: [#38474](https://github.com/owncloud/core/pull/38474)
+* Bugfix - Handle exceptions with inaccessible federated share: [#38474](https://github.com/owncloud/core/pull/38474)
 
    In a scenario federation share storage is inaccessible and returns connection timeouts,
-   federated share storage now does not return not found but storage not available. Additionaly
+   federated share storage now does not return not found but storage not available. Additionally
    logging and notifications handling has been improved.
 
    https://github.com/owncloud/enterprise/issues/4311
@@ -1126,7 +1126,7 @@ Summary
 * Enhancement - New config parameter to define the encrypted file format: [#38337](https://github.com/owncloud/core/pull/38337)
 * Enhancement - Display error/success message while changing the log level: [#38340](https://github.com/owncloud/core/pull/38340)
 * Enhancement - Implement pre-signed download urls for public links: [#38376](https://github.com/owncloud/core/pull/38376)
-* Enhancement - Allow force set DB patforms: [#38379](https://github.com/owncloud/core/pull/38379)
+* Enhancement - Allow force set DB platforms: [#38379](https://github.com/owncloud/core/pull/38379)
 * Enhancement - Added additional connection parameters to redis config: [#38386](https://github.com/owncloud/core/pull/38386)
 * Enhancement - Hide federated user suggestions if system users are found: [#38389](https://github.com/owncloud/core/pull/38389)
 * Enhancement - Indicate existing guest-user as a guest in the share tab: [#38440](https://github.com/owncloud/core/pull/38440)
@@ -1438,7 +1438,7 @@ Details
 * Enhancement - Allow mounting a subfolder from Google Drive: [#38161](https://github.com/owncloud/core/pull/38161)
 
    You can now define a subfolder from your Google Drive when mounting. This gives the ability to:
-   subfolder = empty (like you have it without this enhancment) subfolder = name subfolder =
+   subfolder = empty (like you have it without this enhancement) subfolder = name subfolder =
    name/$user When using encryption, only the subfolder when used gets encrypted.
 
    https://github.com/owncloud/core/pull/38161
@@ -1472,7 +1472,7 @@ Details
 * Enhancement - Improve the UX in the external storage settings page: [#38288](https://github.com/owncloud/core/pull/38288)
 
    When a user adds or edits an external storage, the user will see a notification if the storage has
-   been added or an error occured. When a user hovers over the status indicator, the user will see a
+   been added or an error occurred. When a user hovers over the status indicator, the user will see a
    pointer cursor, this clarifies that a click will result in a config (re-)check.
 
    https://github.com/owncloud/core/pull/38288
@@ -1518,7 +1518,7 @@ Details
    https://github.com/owncloud/core/pull/38376
    https://github.com/owncloud/core/pull/38532
 
-* Enhancement - Allow force set DB patforms: [#38379](https://github.com/owncloud/core/pull/38379)
+* Enhancement - Allow force set DB platforms: [#38379](https://github.com/owncloud/core/pull/38379)
 
    A new 'db.platform' option added to config.php. It allows using a specific database platform
    and do not rely on autodetection.
@@ -1875,7 +1875,7 @@ Details
 * Bugfix - Clean the user's preferences only if they exist during user sync: [#37947](https://github.com/owncloud/core/pull/37947)
 
    Previously, the user's preferences were cleaned during the user:sync command. This was done
-   regardless of the preferences existance, which was causing the
+   regardless of the preferences existence, which was causing the
    "userpreference.afterDeleteValue" event to be triggered always, and then, as consequence,
    the admin_audit app was logging those events. Basically, this bug was causing a log flood by the
    admin_audit app even if those preferences weren't there in the first place.
@@ -3141,7 +3141,7 @@ Summary
 * Change - Update symfony/polyfill (1.14.1 => 1.15.0): [#37174](https://github.com/owncloud/core/pull/37174)
 * Change - Update laminas/laminas-zendframework-bridge (1.0.1 => 1.0.2): [#37174](https://github.com/owncloud/core/pull/37174)
 * Change - Update Symfony components to 4.4.6: [#37176](https://github.com/owncloud/core/pull/37176)
-* Change - Update Laminas dependecies: [#37188](https://github.com/owncloud/core/pull/37188)
+* Change - Update Laminas dependencies: [#37188](https://github.com/owncloud/core/pull/37188)
 * Change - Update Symfony components to 4.4.7: [#37193](https://github.com/owncloud/core/pull/37193)
 * Change - Update laminas/laminas-validator from 2.13.3 to 2.13.4: [#37199](https://github.com/owncloud/core/pull/37199)
 * Change - Update laminas/laminas-zendframework-bridge (1.0.2 => 1.0.3): [#37214](https://github.com/owncloud/core/pull/37214)
@@ -3425,7 +3425,7 @@ Details
    https://github.com/owncloud/core/pull/37176
    https://symfony.com/blog/symfony-4-4-6-released
 
-* Change - Update Laminas dependecies: [#37188](https://github.com/owncloud/core/pull/37188)
+* Change - Update Laminas dependencies: [#37188](https://github.com/owncloud/core/pull/37188)
 
    Bump laminas/laminas-validator from 2.13.2 to 2.13.3 Bump laminas/laminas-filter from
    2.9.3 to 2.9.4
@@ -4150,7 +4150,7 @@ Summary
 * Bugfix - Fix user search problem happening after user deletion: [#36431](https://github.com/owncloud/core/pull/36431)
 * Bugfix - The authentication header can also hold an empty string: [#36465](https://github.com/owncloud/core/pull/36465)
 * Bugfix - Remove query and/or anchor part in remote url: [#36487](https://github.com/owncloud/core/pull/36487)
-* Bugfix - Occ system:cron only shows progess bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
+* Bugfix - Occ system:cron only shows progress bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
 * Change - Update Symfony components to 3.4.32: [#36244](https://github.com/owncloud/core/pull/36244)
 * Change - Update phpspec/prophecy (1.8.1 => 1.9.0): [#36253](https://github.com/owncloud/core/pull/36253)
 * Change - Update zendframework/zend-validator (2.12.0 => 2.12.1): [#36274](https://github.com/owncloud/core/pull/36274)
@@ -4311,9 +4311,9 @@ Details
 
    https://github.com/owncloud/core/pull/36487
 
-* Bugfix - Occ system:cron only shows progess bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
+* Bugfix - Occ system:cron only shows progress bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
 
-   Occ system:cron will only output the progess bar if the newly introduced option --progress is
+   Occ system:cron will only output the progress bar if the newly introduced option --progress is
    set. When being executed from crontab occ system::cron shall only print out in case of error.
 
    https://github.com/owncloud/core/issues/36298
@@ -4556,7 +4556,7 @@ Details
 - Issues with sqlite to mysql migration with `db:convert-type` [#35390](https://github.com/owncloud/core/pull/35390)
 - Upload issues with mismatching checksums [#35294](https://github.com/owncloud/core/pull/35294)
 - Improved memory handling for trashbin expiry background job [#35708](https://github.com/owncloud/core/pull/35708)
-- Proper handling of objecstorage S3 issues on object upload for `files_primary_s3` [core#35389](https://github.com/owncloud/core/pull/35389) [files_primary_s3#212](https://github.com/owncloud/files_primary_s3/pull/212)
+- Proper handling of objectstorage S3 issues on object upload for `files_primary_s3` [core#35389](https://github.com/owncloud/core/pull/35389) [files_primary_s3#212](https://github.com/owncloud/files_primary_s3/pull/212)
 - Respect default application configuration when using TwoFactor Authentication [#36031](https://github.com/owncloud/core/pull/36031)
 - Improved mobile view for file drop links [#34803](https://github.com/owncloud/core/pull/34803)
 - Ignore case of userid in occ `files:scan` command [#35324](https://github.com/owncloud/core/pull/35324)
@@ -5108,7 +5108,7 @@ Details
 - Properly align three button dialogs - [#31147](https://github.com/owncloud/core/issues/31147)
 - Many documentation improvements in config.sample.php - [#31114](https://github.com/owncloud/core/issues/31114) [#31127](https://github.com/owncloud/core/issues/31127) [#31128](https://github.com/owncloud/core/issues/31128) [#31068](https://github.com/owncloud/core/issues/31068) [#31173](https://github.com/owncloud/core/issues/31173) [#31182](https://github.com/owncloud/core/pull/31182)
 - Fix some documentation paths in config.sample.php - [#30431](https://github.com/owncloud/core/issues/30431)
-- Fix App Framework ApiContoller initialization to fix thumbnail access - [#31104](https://github.com/owncloud/core/issues/31104) [#31183](https://github.com/owncloud/core/pull/31183)
+- Fix App Framework ApiController initialization to fix thumbnail access - [#31104](https://github.com/owncloud/core/issues/31104) [#31183](https://github.com/owncloud/core/pull/31183)
 - Check apache auth on login form - [#31074](https://github.com/owncloud/core/issues/31074)
 - Check basic auth credentials periodically after a timeout instead of … - [#31076](https://github.com/owncloud/core/issues/31076)
 - Email autocomplete in link share dialog will not return local/federated users any more, only contacts - [#30998](https://github.com/owncloud/core/issues/30998)
@@ -5410,7 +5410,7 @@ Details
 #### Performance
 - Optimize upload - don't fetch info of non-existing file - [#28704](https://github.com/owncloud/core/issues/28704)
 - Optimize upload - don't check if file exists if already known - [#28704](https://github.com/owncloud/core/issues/28704)
-- Optimize upload - do not fetch metadata for part file during checksuming - [#28633](https://github.com/owncloud/core/issues/28633)
+- Optimize upload - do not fetch metadata for part file during checksumming - [#28633](https://github.com/owncloud/core/issues/28633)
 - Optimize shares retrieval logic with complex scenarios - [#28524](https://github.com/owncloud/core/issues/28524)
 - Optimize query logger - [#28220](https://github.com/owncloud/core/issues/28220)
 - Remove initial scanning overhead to speed up federated shares with lots of entries - [#28604](https://github.com/owncloud/core/issues/28604)

@@ -183,13 +183,13 @@ class Version20170101215145 implements ISchemaMigration {
 			}
 
 			if ($calendarObjectsTable->hasColumn('firstoccurence')) {
-				$firstOccurence = $calendarObjectsTable->getColumn('firstoccurence');
-				$firstOccurence->setType(Type::getType(Type::BIGINT));
+				$firstOccurrence = $calendarObjectsTable->getColumn('firstoccurence');
+				$firstOccurrence->setType(Type::getType(Type::BIGINT));
 			}
 
 			if ($calendarObjectsTable->hasColumn('lastoccurence')) {
-				$lastOccurence = $calendarObjectsTable->getColumn('lastoccurence');
-				$lastOccurence->setType(Type::getType(Type::BIGINT));
+				$lastOccurrence = $calendarObjectsTable->getColumn('lastoccurence');
+				$lastOccurrence->setType(Type::getType(Type::BIGINT));
 			}
 		}
 

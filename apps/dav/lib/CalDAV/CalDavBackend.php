@@ -831,8 +831,8 @@ class CalDavBackend extends AbstractBackend implements SyncSupport, Subscription
 				'etag' => $query->createNamedParameter($extraData['etag']),
 				'size' => $query->createNamedParameter($extraData['size']),
 				'componenttype' => $query->createNamedParameter($extraData['componentType']),
-				'firstoccurence' => $query->createNamedParameter($extraData['firstOccurence']),
-				'lastoccurence' => $query->createNamedParameter($extraData['lastOccurence']),
+				'firstoccurence' => $query->createNamedParameter($extraData['firstOccurrence']),
+				'lastoccurence' => $query->createNamedParameter($extraData['lastOccurrence']),
 				'classification' => $query->createNamedParameter($extraData['classification']),
 				'uid' => $query->createNamedParameter($extraData['uid']),
 			])
@@ -874,8 +874,8 @@ class CalDavBackend extends AbstractBackend implements SyncSupport, Subscription
 				->set('etag', $query->createNamedParameter($extraData['etag']))
 				->set('size', $query->createNamedParameter($extraData['size']))
 				->set('componenttype', $query->createNamedParameter($extraData['componentType']))
-				->set('firstoccurence', $query->createNamedParameter($extraData['firstOccurence']))
-				->set('lastoccurence', $query->createNamedParameter($extraData['lastOccurence']))
+				->set('firstoccurence', $query->createNamedParameter($extraData['firstOccurrence']))
+				->set('lastoccurence', $query->createNamedParameter($extraData['lastOccurrence']))
 				->set('classification', $query->createNamedParameter($extraData['classification']))
 				->set('uid', $query->createNamedParameter($extraData['uid']))
 			->where($query->expr()->eq('calendarid', $query->createNamedParameter($calendarId)))
@@ -960,7 +960,7 @@ class CalDavBackend extends AbstractBackend implements SyncSupport, Subscription
 	 * Note that especially time-range-filters may be difficult to parse. A
 	 * time-range filter specified on a VEVENT must for instance also handle
 	 * recurrence rules correctly.
-	 * A good example of how to interprete all these filters can also simply
+	 * A good example of how to interpret all these filters can also simply
 	 * be found in Sabre\CalDAV\CalendarQueryFilter. This class is as correct
 	 * as possible, so it gives you a good idea on what type of stuff you need
 	 * to think of.
@@ -1498,8 +1498,8 @@ class CalDavBackend extends AbstractBackend implements SyncSupport, Subscription
 	 *   * etag - An md5 checksum of the object without the quotes.
 	 *   * size - Size of the object in bytes
 	 *   * componentType - VEVENT, VTODO or VJOURNAL
-	 *   * firstOccurence
-	 *   * lastOccurence
+	 *   * firstOccurrence
+	 *   * lastOccurrence
 	 *   * uid - value of the UID property
 	 *
 	 * @param string $calendarData
@@ -1574,8 +1574,8 @@ class CalDavBackend extends AbstractBackend implements SyncSupport, Subscription
 			'etag' => \md5($calendarData),
 			'size' => \strlen($calendarData),
 			'componentType' => $componentType,
-			'firstOccurence' => $firstOccurrence === null ? null : \max(0, $firstOccurrence),
-			'lastOccurence'  => $lastOccurrence,
+			'firstOccurrence' => $firstOccurrence === null ? null : \max(0, $firstOccurrence),
+			'lastOccurrence'  => $lastOccurrence,
 			'uid' => $uid,
 			'classification' => $classification
 		];
