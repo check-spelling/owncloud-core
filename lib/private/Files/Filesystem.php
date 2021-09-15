@@ -602,7 +602,7 @@ class Filesystem {
 	}
 
 	/**
-	 * depriciated, replaced by isForbiddenFileOrDir
+	 * deprecated, replaced by isForbiddenFileOrDir
 	 * @param string $filename
 	 * @return boolean
 	 */
