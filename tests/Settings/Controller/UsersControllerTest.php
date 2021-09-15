@@ -1490,7 +1490,7 @@ class UsersControllerTest extends \Test\TestCase {
 			],
 			Http::STATUS_UNPROCESSABLE_ENTITY
 		);
-		$response = $this->container['UsersController']->create('foo', 'password', [], 'invalidMailAdress');
+		$response = $this->container['UsersController']->create('foo', 'password', [], 'invalidMailAddress');
 		$this->assertEquals($expectedResponse, $response);
 	}
 
