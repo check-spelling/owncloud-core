@@ -757,7 +757,7 @@ OC.Uploader.prototype = _.extend({
 				// when only replacement selected -> overwrite
 				self.onReplace(conflict.data('data'));
 			} else {
-				// when only original seleted -> skip
+				// when only original selected -> skip
 				// when none selected -> skip
 				self.onSkip(conflict.data('data'));
 			}
