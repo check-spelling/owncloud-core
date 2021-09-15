@@ -647,7 +647,7 @@ describe('OCA.Files.FileList tests', function() {
 			expect(renameStub.getCall(0).args[0]).toEqual('/some/subdir/One.txt');
 			expect(renameStub.getCall(0).args[1]).toEqual('/some/subdir/Tu_after_three.txt');
 		}
-		it('Inserts renamed file entry at correct position if rename ajax call suceeded', function() {
+		it('Inserts renamed file entry at correct position if rename ajax call succeeded', function() {
 			doRename();
 
 			deferredRename.resolve(201);
