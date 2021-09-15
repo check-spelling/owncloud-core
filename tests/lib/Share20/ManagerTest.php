@@ -3977,7 +3977,7 @@ class ManagerTest extends \Test\TestCase {
 		$shareAttributes->setAttribute('test', 'test2', true);
 		$data[] = [$superShareAttributes,$shareAttributes, false];
 
-		// exception - swaping one of attributes of supershare
+		// exception - swapping one of attributes of supershare
 		$superShareAttributes = new ShareAttributes();
 		$superShareAttributes->setAttribute('test', 'test1', false);
 		$superShareAttributes->setAttribute('test', 'test01', false);
