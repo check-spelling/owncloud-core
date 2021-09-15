@@ -2759,7 +2759,7 @@ class Share extends Constants {
 	/**
 	 * construct select statement
 	 * @param int $format
-	 * @param boolean $fileDependent ist it a file/folder share or a generla share
+	 * @param boolean $fileDependent ist it a file/folder share or a general share
 	 * @param string $uidOwner
 	 * @return string select statement
 	 */
