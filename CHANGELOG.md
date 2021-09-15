@@ -3141,7 +3141,7 @@ Summary
 * Change - Update symfony/polyfill (1.14.1 => 1.15.0): [#37174](https://github.com/owncloud/core/pull/37174)
 * Change - Update laminas/laminas-zendframework-bridge (1.0.1 => 1.0.2): [#37174](https://github.com/owncloud/core/pull/37174)
 * Change - Update Symfony components to 4.4.6: [#37176](https://github.com/owncloud/core/pull/37176)
-* Change - Update Laminas dependecies: [#37188](https://github.com/owncloud/core/pull/37188)
+* Change - Update Laminas dependencies: [#37188](https://github.com/owncloud/core/pull/37188)
 * Change - Update Symfony components to 4.4.7: [#37193](https://github.com/owncloud/core/pull/37193)
 * Change - Update laminas/laminas-validator from 2.13.3 to 2.13.4: [#37199](https://github.com/owncloud/core/pull/37199)
 * Change - Update laminas/laminas-zendframework-bridge (1.0.2 => 1.0.3): [#37214](https://github.com/owncloud/core/pull/37214)
@@ -3425,7 +3425,7 @@ Details
    https://github.com/owncloud/core/pull/37176
    https://symfony.com/blog/symfony-4-4-6-released
 
-* Change - Update Laminas dependecies: [#37188](https://github.com/owncloud/core/pull/37188)
+* Change - Update Laminas dependencies: [#37188](https://github.com/owncloud/core/pull/37188)
 
    Bump laminas/laminas-validator from 2.13.2 to 2.13.3 Bump laminas/laminas-filter from
    2.9.3 to 2.9.4
