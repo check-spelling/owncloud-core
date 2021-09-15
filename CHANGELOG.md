@@ -1438,7 +1438,7 @@ Details
 * Enhancement - Allow mounting a subfolder from Google Drive: [#38161](https://github.com/owncloud/core/pull/38161)
 
    You can now define a subfolder from your Google Drive when mounting. This gives the ability to:
-   subfolder = empty (like you have it without this enhancment) subfolder = name subfolder =
+   subfolder = empty (like you have it without this enhancement) subfolder = name subfolder =
    name/$user When using encryption, only the subfolder when used gets encrypted.
 
    https://github.com/owncloud/core/pull/38161
