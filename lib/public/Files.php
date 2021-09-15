@@ -45,7 +45,7 @@ namespace OCP;
  */
 class Files {
 	/**
-	 * Recusive deletion of folders
+	 * Recursive deletion of folders
 	 * @return bool
 	 * @since 5.0.0
 	 */
