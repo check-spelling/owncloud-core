@@ -77,7 +77,7 @@ class Helper extends \OC\Share\Constants {
 	 * @param int $parent Id of item to delete
 	 * @param bool $excludeParent If true, exclude the parent from the delete (optional)
 	 * @param string $uidOwner The user that the parent was shared with (optional)
-	 * @param int $newParent new parent for the childrens
+	 * @param int $newParent new parent for the children
 	 * @param bool $excludeGroupChildren exclude group children elements
 	 * @return array of deleted items
 	 */

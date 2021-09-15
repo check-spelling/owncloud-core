@@ -318,7 +318,7 @@ class FileInfo implements \OCP\Files\FileInfo, \ArrayAccess {
 	/**
 	 * Add a cache entry which is the child of this folder
 	 *
-	 * Sets the size, etag and size to for cross-storage childs
+	 * Sets the size, etag and size to for cross-storage children
 	 *
 	 * @param array $data cache entry for the child
 	 * @param string $entryPath full path of the child entry

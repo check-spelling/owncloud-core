@@ -664,20 +664,20 @@ class CacheTest extends TestCase {
 		$folderData = ['size' => 100, 'mtime' => 50, 'mimetype' => 'httpd/unix-directory'];
 		$this->cache->put($name, $folderData);
 		$this->cache->put('other', $folderData);
-		$childs = ['asd', 'bar', 'foo', 'sub/folder'];
+		$children = ['asd', 'bar', 'foo', 'sub/folder'];
 		$this->cache->put($name . '/sub', $folderData);
 		$this->cache->put('other/sub', $folderData);
-		foreach ($childs as $child) {
+		foreach ($children as $child) {
 			$this->cache->put($name . '/' . $child, $data);
 			$this->cache->put('other/' . $child, $data);
 			$this->assertTrue($this->cache->inCache($name . '/' . $child));
 		}
 		$this->cache->move($name, $name . 'asd');
-		foreach ($childs as $child) {
+		foreach ($children as $child) {
 			$this->assertTrue($this->cache->inCache($name . 'asd/' . $child));
 			$this->assertTrue($this->cache->inCache('other/' . $child));
 		}
-		foreach ($childs as $child) {
+		foreach ($children as $child) {
 			$this->cache->remove($name . 'asd/' . $child);
 			$this->assertFalse($this->cache->inCache($name . 'asd/' . $child));
 			$this->assertTrue($this->cache->inCache('other/' . $child));
