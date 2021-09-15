@@ -131,15 +131,15 @@ class CacheTest extends TestCase {
 			}
 		}
 
-		$file4 = $folder.'/unkownSize';
-		$fileData['unkownSize'] = ['size' => -1, 'mtime' => 25, 'mimetype' => 'foo/file'];
-		$this->cache->put($file4, $fileData['unkownSize']);
+		$file4 = $folder.'/unknownSize';
+		$fileData['unknownSize'] = ['size' => -1, 'mtime' => 25, 'mimetype' => 'foo/file'];
+		$this->cache->put($file4, $fileData['unknownSize']);
 
 		// -2 = IScanner::SIZE_SHALLOW_SCANNED
 		$this->assertEquals(-2, $this->cache->calculateFolderSize($folder));
 
-		$fileData['unkownSize'] = ['size' => 5, 'mtime' => 25, 'mimetype' => 'foo/file'];
-		$this->cache->put($file4, $fileData['unkownSize']);
+		$fileData['unknownSize'] = ['size' => 5, 'mtime' => 25, 'mimetype' => 'foo/file'];
+		$this->cache->put($file4, $fileData['unknownSize']);
 
 		$this->assertEquals(1025, $this->cache->calculateFolderSize($folder));
 
@@ -205,15 +205,15 @@ class CacheTest extends TestCase {
 			$data = $fileData[$cachedData['name']];
 		}
 
-		$file4 = 'folder/unkownSize';
-		$fileData['unkownSize'] = ['size' => -1, 'mtime' => 25, 'mimetype' => 'foo/file'];
-		$this->cache->put($file4, $fileData['unkownSize']);
+		$file4 = 'folder/unknownSize';
+		$fileData['unknownSize'] = ['size' => -1, 'mtime' => 25, 'mimetype' => 'foo/file'];
+		$this->cache->put($file4, $fileData['unknownSize']);
 
 		// -2 = IScanner::SIZE_SHALLOW_SCANNED
 		$this->assertEquals(-2, $this->cache->calculateFolderSize($file1));
 
-		$fileData['unkownSize'] = ['size' => 5, 'mtime' => 25, 'mimetype' => 'foo/file'];
-		$this->cache->put($file4, $fileData['unkownSize']);
+		$fileData['unknownSize'] = ['size' => 5, 'mtime' => 25, 'mimetype' => 'foo/file'];
+		$this->cache->put($file4, $fileData['unknownSize']);
 
 		$this->assertEquals(1025, $this->cache->calculateFolderSize($file1));
 		// direct cache entry retrieval returns the original values
