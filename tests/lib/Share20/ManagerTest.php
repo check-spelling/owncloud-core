@@ -3015,7 +3015,7 @@ class ManagerTest extends \Test\TestCase {
 
 		$shares = $manager->getAllSharesBy('user', [\OCP\Share::SHARE_TYPE_USER], $nodes, true);
 
-		// One share whould be expired
+		// One share would be expired
 		$this->assertCount(200, $shares);
 		$this->assertSame($share, $shares[0]);
 		$this->assertSame($share, $shares[100]);
