@@ -138,7 +138,7 @@ describe('MimeType tests', function() {
 				OC.currentTheme.name = _themeFolder;
 			});
 
-			it('test if theme path is used if a theme icon is availble', function() {
+			it('test if theme path is used if a theme icon is available', function() {
 				var res = OC.MimeType.getIconUrl('dir');
 				expect(res).toEqual(OC.getRootPath() + '/themes/abc/core/img/filetypes/folder.svg');
 			});
