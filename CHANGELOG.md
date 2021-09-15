@@ -1875,7 +1875,7 @@ Details
 * Bugfix - Clean the user's preferences only if they exist during user sync: [#37947](https://github.com/owncloud/core/pull/37947)
 
    Previously, the user's preferences were cleaned during the user:sync command. This was done
-   regardless of the preferences existance, which was causing the
+   regardless of the preferences existence, which was causing the
    "userpreference.afterDeleteValue" event to be triggered always, and then, as consequence,
    the admin_audit app was logging those events. Basically, this bug was causing a log flood by the
    admin_audit app even if those preferences weren't there in the first place.
