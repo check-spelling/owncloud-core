@@ -747,11 +747,11 @@ class ManagerTest extends \Test\TestCase {
 			['core', 'shareapi_disable_enforce_links_password_for_upload_only', 'no', 'no'],
 		]));
 
-		$hookListner = $this->getMockBuilder('Dummy')->setMethods(['listner'])->getMock();
-		\OCP\Util::connectHook('\OC\Share', 'verifyPassword', $hookListner, 'listner');
+		$hookListner = $this->getMockBuilder('Dummy')->setMethods(['listener'])->getMock();
+		\OCP\Util::connectHook('\OC\Share', 'verifyPassword', $hookListner, 'listener');
 
 		$hookListner->expects($this->once())
-			->method('listner')
+			->method('listener')
 			->with([
 				'password' => 'password',
 				'accepted' => true,
@@ -774,7 +774,7 @@ class ManagerTest extends \Test\TestCase {
 		]));
 
 		$dummy = new DummyPassword();
-		\OCP\Util::connectHook('\OC\Share', 'verifyPassword', $dummy, 'listner');
+		\OCP\Util::connectHook('\OC\Share', 'verifyPassword', $dummy, 'listener');
 		$this->invokePrivate($this->manager, 'verifyPassword', ['password']);
 	}
 
@@ -2060,10 +2060,10 @@ class ManagerTest extends \Test\TestCase {
 		$share->setNode($path)
 			->setPermissions(15);
 
-		$hookListner = $this->getMockBuilder('Dummy')->setMethods(['listner'])->getMock();
-		\OCP\Util::connectHook('\OC\Share', 'verifyPassword', $hookListner, 'listner');
+		$hookListner = $this->getMockBuilder('Dummy')->setMethods(['listener'])->getMock();
+		\OCP\Util::connectHook('\OC\Share', 'verifyPassword', $hookListner, 'listener');
 		$hookListner->expects($this->any())
-			->method('listner')
+			->method('listener')
 			->will($this->returnCallback(function (array $array) {
 				$array['accepted'] = true;
 				$array['message'] = 'password accepted';
@@ -4022,7 +4022,7 @@ class ManagerTest extends \Test\TestCase {
 }
 
 class DummyPassword {
-	public function listner($array) {
+	public function listener($array) {
 		$array['accepted'] = false;
 		$array['message'] = 'password not accepted';
 	}
