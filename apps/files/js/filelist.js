@@ -1900,7 +1900,7 @@
 			return this.getPathShareInfo(dir).then(function () {
 				var breadcrumbs = dir.split('/');
 
-				// Diff keys in shareTreeCache agains the current dir
+				// Diff keys in shareTreeCache against the current dir
 				// removing deeper nested shares
 				var cache = _.omit(self._shareTreeCache, function(value, key) {
 					var diffs = _.difference(key.split('/'), breadcrumbs);
