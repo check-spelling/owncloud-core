@@ -537,7 +537,7 @@ abstract class StoragesService implements IStoragesService {
 			}
 		}
 
-		// note: similar to ConfigAdapter->prepateStorageConfig()
+		// note: similar to ConfigAdapter->prepareStorageConfig()
 		$storageConfig->getAuthMechanism()->manipulateStorageConfig($storageConfig);
 		$storageConfig->getBackend()->manipulateStorageConfig($storageConfig);
 
