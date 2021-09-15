@@ -3146,7 +3146,7 @@ class UsersControllerTest extends \Test\TestCase {
 	/**
 	 * @param $conditionForException
 	 */
-	public function testSetPasswordNullUserExcception() {
+	public function testSetPasswordNullUserException() {
 		$result = $this->container['UsersController']->setPassword('fooBaZ1', 'foo', '123');
 		$this->assertEquals(
 			new Http\JSONResponse(
@@ -3161,7 +3161,7 @@ class UsersControllerTest extends \Test\TestCase {
 		);
 	}
 
-	public function testSetPasswordInvalidTokenExcception() {
+	public function testSetPasswordInvalidTokenException() {
 		$user = $this->createMock(IUser::class);
 		$this->container['UserManager']->method('get')
 			->with('foo')
