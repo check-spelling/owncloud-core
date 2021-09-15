@@ -284,7 +284,7 @@ class Helper extends \OC\Share\Constants {
 
 		$l = \OC::$server->getL10N('lib');
 		$hint = $l->t('Invalid Federated Cloud ID');
-		throw new HintException('Invalid Fededrated Cloud ID', $hint);
+		throw new HintException('Invalid Federated Cloud ID', $hint);
 	}
 
 	/**
