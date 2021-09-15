@@ -4150,7 +4150,7 @@ Summary
 * Bugfix - Fix user search problem happening after user deletion: [#36431](https://github.com/owncloud/core/pull/36431)
 * Bugfix - The authentication header can also hold an empty string: [#36465](https://github.com/owncloud/core/pull/36465)
 * Bugfix - Remove query and/or anchor part in remote url: [#36487](https://github.com/owncloud/core/pull/36487)
-* Bugfix - Occ system:cron only shows progess bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
+* Bugfix - Occ system:cron only shows progress bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
 * Change - Update Symfony components to 3.4.32: [#36244](https://github.com/owncloud/core/pull/36244)
 * Change - Update phpspec/prophecy (1.8.1 => 1.9.0): [#36253](https://github.com/owncloud/core/pull/36253)
 * Change - Update zendframework/zend-validator (2.12.0 => 2.12.1): [#36274](https://github.com/owncloud/core/pull/36274)
@@ -4311,9 +4311,9 @@ Details
 
    https://github.com/owncloud/core/pull/36487
 
-* Bugfix - Occ system:cron only shows progess bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
+* Bugfix - Occ system:cron only shows progress bar if option is set: [#36298](https://github.com/owncloud/core/issues/36298)
 
-   Occ system:cron will only output the progess bar if the newly introduced option --progress is
+   Occ system:cron will only output the progress bar if the newly introduced option --progress is
    set. When being executed from crontab occ system::cron shall only print out in case of error.
 
    https://github.com/owncloud/core/issues/36298
