@@ -1824,7 +1824,7 @@
 				return Promise.reject('getDirShareInfo(). param must be typeof string and can not be empty!');
 			}
 
-			// avoiding a unnessesary API calls
+			// avoiding a unnecessary API calls
 			if (typeof this._shareTreeCache[dir] !== 'undefined' || dir === '/') {
 				return Promise.resolve();
 			}
