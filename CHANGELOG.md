@@ -1472,7 +1472,7 @@ Details
 * Enhancement - Improve the UX in the external storage settings page: [#38288](https://github.com/owncloud/core/pull/38288)
 
    When a user adds or edits an external storage, the user will see a notification if the storage has
-   been added or an error occured. When a user hovers over the status indicator, the user will see a
+   been added or an error occurred. When a user hovers over the status indicator, the user will see a
    pointer cursor, this clarifies that a click will result in a config (re-)check.
 
    https://github.com/owncloud/core/pull/38288
