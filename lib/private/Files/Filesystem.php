@@ -434,7 +434,7 @@ class Filesystem {
 		$mountConfigManager = \OC::$server->getMountProviderCollection();
 		'@phan-var \OC\Files\Config\MountProviderCollection $mountConfigManager';
 
-		// home mounts are handled seperate since we need to ensure this is mounted before we call the other mount providers
+		// home mounts are handled separate since we need to ensure this is mounted before we call the other mount providers
 		$homeMount = $mountConfigManager->getHomeMountForUser($userObject);
 
 		self::getMountManager()->addMount($homeMount);
